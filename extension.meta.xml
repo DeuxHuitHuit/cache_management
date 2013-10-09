@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extension id="cache_management" status="experimental" xmlns="http://symphony-cms.com/schemas/extension/1.0">
+	<name>Cache Management</name>
+	<description>
+		Offers a backend page to manage (clear) Symphony's caches mechanism
+	</description>
+	<repo type="github">https://github.com/DeuxHuitHuit/cache_management</repo>
+	<url type="discuss">https://github.com/DeuxHuitHuit/cache_management/issues</url>
+	<types>
+		<type>Cache</type>
+		<type>Management</type>
+	</types>
+	<authors>
+		<author>
+			<name github="DeuxHuitHuit" symphony="nitriques" twitter="DeuxHuitHuit">Deux Huit Huit</name>
+			<website>http://deuxhuithuit.com/</website>
+		</author>
+	</authors>
+	<dependencies>
+		<!-- None -->
+	</dependencies>
+	<releases>
+		<release version="1.0" date="2013-10-09" min="2.3.1">
+			- First release
+		</release>
+	</releases>
+</extension>
