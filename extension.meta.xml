@@ -20,6 +20,9 @@
 		<!-- None -->
 	</dependencies>
 	<releases>
+		<release version="1.1" date="2014-03-25" min="2.3.1">
+			- Support for deleting cachelite files
+		</release>
 		<release version="1.0" date="2013-10-09" min="2.3.1">
 			- First release
 		</release>
