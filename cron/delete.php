@@ -1,8 +1,8 @@
 <?php 
 require('include.cron.php');
 
-CacheManagement::deleteFileCache();
-echo 'Deleted file cache' . PHP_EOL;
+$count = CacheManagement::deleteFileCache();
+echo sprintf('Deleted %d files in cache', $count) . PHP_EOL;
 
-CacheManagement::deleteDBCache();
-echo 'Deleted DB cache' . PHP_EOL;
+$count = CacheManagement::deleteDBCache();
+echo sprintf('Deleted %d DB cache entries', $count) . PHP_EOL;

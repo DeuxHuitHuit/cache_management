@@ -41,6 +41,8 @@
 			$fieldset->appendChild(Widget::Input('action[del-file]', __('Clear file cache'), 'submit'));
 			$fieldset->appendChild(Widget::Input('action[del-db]', __('Clear DB cache'), 'submit'));
 			
+			$fieldset->appendChild(Widget::Input('action[del-cachelite]', __('Clear cachelite files'), 'submit'));
+			
 			$this->Form->appendChild($fieldset);
 			
 			if ($this->showResult) {
@@ -64,6 +66,9 @@
 						case 'del-db':
 							$this->deleteDBCache();
 							break;
+						case 'del-cachelite':
+							$this->deleteCachelite();
+							break;
 						case 'pur-file':
 							$this->purgeFileCache();
 							break;
@@ -73,6 +78,14 @@
 					}
 				}
 			}
+		}
+		
+		/* Cachelite */
+		private function deleteCachelite() {
+			$count = CacheManagement::purgeFileCache(false, '/^cache_(.+)/');
+			
+			$this->_Result->appendChild(new XMLElement('p', __('All %d cachelite files deleted.', array($count))));
+			$this->showResult = true;
 		}
 		
 		/* File cache */
