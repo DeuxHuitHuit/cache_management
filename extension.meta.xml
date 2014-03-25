@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<extension id="cache_management" status="experimental" xmlns="http://symphony-cms.com/schemas/extension/1.0">
+<extension id="cache_management" status="released" xmlns="http://symphony-cms.com/schemas/extension/1.0">
 	<name>Cache Management</name>
 	<description>
 		Offers a backend page to manage (clear) Symphony's caches mechanism
