@@ -1,6 +1,6 @@
 # Cache Management #
 
-Version: 1.1
+Version: 1.1.1
 
 ## Offers a backend page to manage (clear) Symphony's caches mechanism ##
 
