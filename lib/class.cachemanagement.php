@@ -40,6 +40,6 @@
 		}
 		
 		private static function getCacheCount() {
-			return Symphony::Database()->fetchVar('c', 0, 'SELECT count(id) FROM tbl_cache');
+			return Symphony::Database()->fetchVar('c', 0, 'SELECT count(*) as `c` FROM tbl_cache');
 		}
 	}
