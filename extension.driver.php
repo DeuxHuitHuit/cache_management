@@ -25,7 +25,14 @@
 		 * Delegate fired to add a link to Cache Management
 		 */
 		public function fetchNavigation() {
-			$group = Administration::instance()->Author->isDeveloper() ? 'developer' : 'manager';
+		
+			if (is_callable(array('Symphony', 'Author'))) {
+    				$author = Symphony::Author();
+			} else {
+    				$author = Administration::instance()->Author;
+			}
+			
+			$group = $author->isDeveloper() ? 'developer' : 'manager';
 			
 			return array(
 					array (
