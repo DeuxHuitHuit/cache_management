@@ -2,7 +2,7 @@
 
 Version: 1.2
 
-> Offers a backend page to manage (clear) Symphony's caches mechanism ##
+> Offers a backend page to manage (clear) Symphony's caches mechanism
 
 ### SPECS ###
 
