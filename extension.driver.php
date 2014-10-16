@@ -1,6 +1,6 @@
 <?php
 	/*
-	Copyight: Deux Huit Huit 2013-2014
+	Copyright: Deux Huit Huit 2013-2014
 	License: MIT, http://deuxhuithuit.mit-license.org
 	*/
 
@@ -31,6 +31,7 @@
 					$author = Administration::instance()->Author;
 			}
 			
+			// Work around single group limit in nav
 			$group = $author->isDeveloper() ? 'developer' : 'manager';
 			
 			return array(
