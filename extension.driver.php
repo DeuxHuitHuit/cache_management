@@ -1,6 +1,6 @@
 <?php
 	/*
-	Copyight: Deux Huit Huit 2013
+	Copyight: Deux Huit Huit 2013-2014
 	License: MIT, http://deuxhuithuit.mit-license.org
 	*/
 
@@ -25,11 +25,10 @@
 		 * Delegate fired to add a link to Cache Management
 		 */
 		public function fetchNavigation() {
-		
 			if (is_callable(array('Symphony', 'Author'))) {
-    				$author = Symphony::Author();
+					$author = Symphony::Author();
 			} else {
-    				$author = Administration::instance()->Author;
+					$author = Administration::instance()->Author;
 			}
 			
 			$group = $author->isDeveloper() ? 'developer' : 'manager';
