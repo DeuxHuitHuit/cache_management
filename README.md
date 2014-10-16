@@ -1,6 +1,6 @@
 # Cache Management #
 
-Version: 1.1.1
+Version: 1.2
 
 ## Offers a backend page to manage (clear) Symphony's caches mechanism ##
 
@@ -24,6 +24,8 @@ You can clear:
 - Enable/install just like any other extension
 
 See <http://getsymphony.com/learn/tasks/view/install-an-extension/>
+
+You can also install it usign the [extension downloader](http://symphonyextensions.com/extensions/extension_downloader/).
 
 *Voila !*
 
