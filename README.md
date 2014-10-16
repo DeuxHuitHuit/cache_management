@@ -23,13 +23,9 @@ You can clear:
 - Put into the extension directory
 - Enable/install just like any other extension
 
-See <http://getsymphony.com/learn/tasks/view/install-an-extension/>
+You can also install it using the [extension downloader](http://symphonyextensions.com/extensions/extension_downloader/).
 
-You can also install it usign the [extension downloader](http://symphonyextensions.com/extensions/extension_downloader/).
-
-*Voila !*
-
-Come say hi! -> <http://www.deuxhuithuit.com/>
+For more information, see <http://getsymphony.com/learn/tasks/view/install-an-extension/>
 
 ### HOW TO USE ###
 
@@ -38,3 +34,7 @@ Come say hi! -> <http://www.deuxhuithuit.com/>
 ### LICENSE ###
 
 MIT <http://deuxhuithuit.mit-license.org>
+
+*Voila !*
+
+Come say hi! -> <https://deuxhuithuit.com/>
