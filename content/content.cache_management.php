@@ -43,6 +43,10 @@
 			
 			$fieldset->appendChild(Widget::Input('action[del-cachelite]', __('Clear cachelite files'), 'submit'));
 			
+			//if (is_dir(CACHE . '/cacheabledatasource')) {
+				$fieldset->appendChild(Widget::Input('action[del-cacheabledatasource]', __('Clear Cacheable Datasource files'), 'submit'));
+			//}
+			
 			$this->Form->appendChild($fieldset);
 			
 			if ($this->showResult) {
@@ -75,6 +79,9 @@
 						case 'pur-db':
 							$this->purgeDBCache();
 							break;
+						case 'del-cacheabledatasource':
+							$this->deleteCDCache();
+							break;
 					}
 				}
 			}
@@ -98,7 +105,7 @@
 		
 		private function purgeFileCache() {
 			$count = CacheManagement::purgeFileCache();
-				
+			
 			$this->_Result->appendChild(new XMLElement('p', __('Deleted %d expired files.', array($count))));
 			$this->showResult = true;
 		}
@@ -116,6 +123,14 @@
 			$count = CacheManagement::purgeDBCache();
 				
 			$this->_Result->appendChild(new XMLElement('p', __('Deleted %d expired cache entries.', array($count))));
+			$this->showResult = true;
+		}
+		
+		/* Cacheable Datasource */
+		private function deleteCDCache() {
+			$count = CacheManagement::purgeFileCache(false, null, '/cacheabledatasource');
+			
+			$this->_Result->appendChild(new XMLElement('p', __('All %d Cacheable Datasource files deleted.', array($count))));
 			$this->showResult = true;
 		}
 	}

@@ -9,9 +9,9 @@
 		public static function deleteFileCache() {
 			return self::purgeFileCache(false);
 		}
-		public static function purgeFileCache($expiredOnly = true, $filter = null) {
+		public static function purgeFileCache($expiredOnly = true, $filter = null, $subdirectory = '') {
 			$count = 0;
-			$files = General::listStructure(CACHE, $filter, false);
+			$files = General::listStructure(CACHE . $subdirectory, $filter, false);
 		
 			if (!empty($files)) {
 				foreach ($files['filelist'] as $file) {
