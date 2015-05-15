@@ -1,6 +1,6 @@
 # Cache Management #
 
-Version: 1.2
+Version: 1.3.x
 
 > Offers a backend page to manage (clear) Symphony's caches mechanism
 
@@ -11,6 +11,7 @@ You can clear:
 - The Database cache, used by the Cacheable class
 - The File cache, i.e. manifest/cache folder
 - Cachelite extension cache
+- Cacheable Datasource extension cache
 
 
 ### REQUIREMENTS ###
