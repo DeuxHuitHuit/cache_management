@@ -21,6 +21,17 @@
 		const EXT_NAME = 'Cache Management';
 
 		/*********** DELEGATES ***********************/
+		
+		public function getSubscribedDelegates(){
+			return array(
+				array(
+					'page' => '/backend/',
+					'delegate' => 'NavigationPreRender',
+					'callback' => 'navigationPreRender'
+				)
+			);
+		}
+		
 		/**
 		 * Delegate fired to add a link to Cache Management
 		 */
@@ -42,6 +53,14 @@
 						'limit' => $group,
 					) // nav group
 			); // nav
+		}
+		
+		public function navigationPreRender($context) {
+			foreach ($context['navigation'] as $key => $section) {
+				if ($section['name'] == 'System') {
+					$context['navigation'][$key]['class'] = 'active';
+				}
+			}
 		}
 
 
