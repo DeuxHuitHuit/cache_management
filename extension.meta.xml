@@ -24,6 +24,7 @@
 			- Added support for clearing Cacheable Datasource extension files (if installed)
 			- Added Slovak translation
 			- Marked as Symphony 2.6.x compatible
+			- Made the System nav group active when in the content page (Fixes issue #6)
 		</release>
 		<release version="1.2" date="2014-10-16" min="2.3.1" max="2.5.x">
 			- Added compatibility with Symphony 2.5
