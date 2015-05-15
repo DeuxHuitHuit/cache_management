@@ -43,9 +43,9 @@
 			
 			$fieldset->appendChild(Widget::Input('action[del-cachelite]', __('Clear cachelite files'), 'submit'));
 			
-			//if (is_dir(CACHE . '/cacheabledatasource')) {
+			if (is_dir(CACHE . '/cacheabledatasource')) {
 				$fieldset->appendChild(Widget::Input('action[del-cacheabledatasource]', __('Clear Cacheable Datasource files'), 'submit'));
-			//}
+			}
 			
 			$this->Form->appendChild($fieldset);
 			
