@@ -56,9 +56,12 @@
 		}
 		
 		public function navigationPreRender($context) {
-			foreach ($context['navigation'] as $key => $section) {
-				if ($section['name'] == 'System') {
-					$context['navigation'][$key]['class'] = 'active';
+			$c = Administration::instance()->getPageCallback();
+			if ($c['driver'] == 'cache_management') {
+				foreach ($context['navigation'] as $key => $section) {
+					if ($section['name'] == 'System') {
+						$context['navigation'][$key]['class'] = 'active';
+					}
 				}
 			}
 		}
