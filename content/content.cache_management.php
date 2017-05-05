@@ -24,6 +24,8 @@
 		 * Builds the content view
 		 */
 		public function __viewIndex() {
+        	$this->Contents->setAttribute('class', 'centered-content');
+
 			$title = __('Cache Management');
 
 			$this->setTitle(__('%1$s &ndash; %2$s', array(__('Symphony'), $title)));
