@@ -22,16 +22,6 @@
 
 		/*********** DELEGATES ***********************/
 
-		public function getSubscribedDelegates(){
-			return array(
-				array(
-					'page' => '/backend/',
-					'delegate' => 'NavigationPreRender',
-					'callback' => 'navigationPreRender'
-				)
-			);
-		}
-
 		/**
 		 * Delegate fired to add a link to Cache Management
 		 */
