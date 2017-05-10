@@ -9,7 +9,7 @@
 	require_once(TOOLKIT . '/class.administrationpage.php');
 	require_once(EXTENSIONS . '/cache_management/lib/class.cachemanagement.php');
 
-	class contentExtensionCache_managementCache_Management extends AdministrationPage {
+	class contentExtensionCache_managementIndex extends AdministrationPage {
 
 		private $_Result = null;
 		private $showResult = false;

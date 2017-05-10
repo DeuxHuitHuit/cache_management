@@ -49,23 +49,11 @@
 					array (
 						'location' => __('System'),
 						'name' => __(self::EXT_NAME),
-						'link' => 'cache_management/',
+						'link' => '/',
 						'limit' => $group,
 					) // nav group
 			); // nav
 		}
-
-		public function navigationPreRender($context) {
-			$c = Administration::instance()->getPageCallback();
-			if ($c['driver'] == 'cache_management') {
-				foreach ($context['navigation'] as $key => $section) {
-					if ($section['name'] == 'System') {
-						$context['navigation'][$key]['class'] = 'active opened';
-					}
-				}
-			}
-		}
-
 
 		/* ********* INSTALL/UPDATE/UNISTALL ******* */
 
