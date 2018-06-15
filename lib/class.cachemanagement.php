@@ -40,8 +40,13 @@
 
 		public static function purgeDBCache() {
 			$count = self::getCacheCount();
-			$cache = new Cacheable(Symphony::Database());
-			$cache->delete();
+
+			Symphony::Database()
+				->delete('tbl_cache')
+				->where(['expiry' => ['<' => time() - (60 * 60)]])
+				->execute()
+				->success();
+
 			return $count - self::getCacheCount();
 		}
 
