@@ -41,7 +41,7 @@
 		public static function purgeDBCache() {
 			$count = self::getCacheCount();
 			$cache = new Cacheable(Symphony::Database());
-			$cache->clean();
+			$cache->delete();
 			return $count - self::getCacheCount();
 		}
 

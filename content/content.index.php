@@ -24,7 +24,7 @@
 		 * Builds the content view
 		 */
 		public function __viewIndex() {
-        	$this->Contents->setAttribute('class', 'centered-content');
+			$this->Contents->setAttribute('class', 'centered-content');
 
 			$title = __('Cache Management');
 
