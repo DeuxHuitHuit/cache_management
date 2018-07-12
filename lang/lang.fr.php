@@ -18,7 +18,7 @@
 		// Missing
 
 		'Cache Management' =>
-		false,
+		'Gestion de la cache',
 
 		'Please choose what to delete' =>
 		'Veuillez sélectionner quoi supprimer',
